@@ -1,10 +1,18 @@
 import supertest from "supertest";
 import app from "./app";
-import Test from "supertest/lib/test";
 
 describe("Post/User", () => {
     describe("Usuario y clave correcta", () => {
         //deberia ser un objeto json
+        test("debería recibir un JSON en content-type", async () => {
+            const response = await supertest(app).post('/users').send({
+                username: "username",
+                password: "password"
+            });
+        expect(response.headers['content-type']).toEqual(expect.stringContaining("json"));
+        });
+
+        
         //deberia guardar en BD
         //deberia responder status200
         //debe tener json en el texto

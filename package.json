@@ -1,21 +1,24 @@
 {
   "type": "module",
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "pg": "^8.12.0"
   },
-  "name": "test",
+  "name": "test_express_01",
   "version": "1.0.0",
+  "description": "Proyecto Express con Jest y Supertest",
   "main": "server.js",
   "devDependencies": {
     "jest": "^29.7.0",
+    "nodemon": "^3.1.4",
     "supertest": "^7.0.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "node server.js"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "description": ""
+  "license": "ISC"
 }
+
